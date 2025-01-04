@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up and Sign In</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sign Up Form -->
+        <div class="form-container" id="sign-up-form">
+            <h2>Sign Up</h2>
+            <form action="#" method="POST">
+                <label for="signup-username">Username</label>
+                <input type="text" id="signup-username" name="username" required>
+
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" name="email" required>
+
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" name="password" required>
+
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="showSignIn()">Sign In</a></p>
+        </div>
+
+        <!-- Sign In Form -->
+        <div class="form-container" id="sign-in-form" style="display: none;">
+            <h2>Sign In</h2>
+            <form action="#" method="POST">
+                <label for="signin-username">Username</label>
+                <input type="text" id="signin-username" name="username" required>
+
+                <label for="signin-password">Password</label>
+                <input type="password" id="signin-password" name="password" required>
+
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script>
+        function showSignUp() {
+            document.getElementById('sign-up-form').style.display = 'block';
+            document.getElementById('sign-in-form').style.display = 'none';
+        }
+
+        function showSignIn() {
+            document.getElementById('sign-up-form').style.display = 'none';
+            document.getElementById('sign-in-form').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
